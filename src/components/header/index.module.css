@@ -1,0 +1,21 @@
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.header h1{
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+}
+
+@media (min-width: 768px) {
+    .header {
+        padding: 50px;
+        margin-bottom: 60px;
+    }
+}
