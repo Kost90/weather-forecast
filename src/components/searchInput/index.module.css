@@ -1,0 +1,16 @@
+.searchInput {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 8px 10px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 240px;
+}
+
+@media (min-width: 768px) {
+  .searchInput {
+    max-width: 320px;
+  }
+}

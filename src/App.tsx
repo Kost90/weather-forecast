@@ -1,12 +1,12 @@
 import Header from "./components/header/Header";
 import Container from "./layout/containers/Container";
-import Form from "./components/form/Form";
+import WeatherDataPriview from "./components/weatherDataPreview/WeatherDataPriview";
 
 function App() {
   return (
     <Container>
       <Header/>
-      <Form/>
+      <WeatherDataPriview/>
     </Container>
   );
 }

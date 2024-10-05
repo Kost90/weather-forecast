@@ -1,0 +1,23 @@
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 420px;
+  width: 100%;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+
+.formElementsWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .formWrapper {
+    margin-bottom: 60px;
+  }
+}

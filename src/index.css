@@ -8,6 +8,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(215, 232, 232);
 }
 
 h1 {
@@ -18,7 +19,7 @@ h1 {
 
 @media (min-width: 768px) {
   h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 }
 

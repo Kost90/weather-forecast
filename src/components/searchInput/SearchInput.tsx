@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './index.module.css';
 
 type SearxhInputProps = {
   iputvalue: string;
@@ -10,7 +11,24 @@ function SearchInput({ iputvalue, onChange }: SearxhInputProps) {
     onChange(e.target.value);
   };
 
-  return <input type="text" placeholder="Enter a location" value={iputvalue} onChange={handelChange} />;
+  const handelKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+    }
+  };
+
+  return (
+    <div>
+      <input
+        type="text"
+        placeholder="Enter a location"
+        value={iputvalue}
+        onChange={handelChange}
+        onKeyDown={handelKeyDown}
+        className={styles.searchInput}
+      />
+    </div>
+  );
 }
 
 export default SearchInput;
