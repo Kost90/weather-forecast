@@ -43,7 +43,7 @@ function Form({ handelChangeLocationName, onSubmit, handelChangeError, handelCha
         signal: signal,
       });
       if (!response.results || response.results.length === 0) {
-        throw new Error("Can't find any location for your request");
+        throw new Error("Can't find any location for your request, enter correct City or Town name");
       }
       handelChangeError(null);
       handelChangeLocationName(response.results[0].name);
@@ -83,7 +83,7 @@ function Form({ handelChangeLocationName, onSubmit, handelChangeError, handelCha
           <SearchInput iputvalue={inputValue} onChange={handelChange} />
           <Button text={loading ? 'Loading' : 'Submit'} type="submit" disabled={loading} />
         </div>
-        {formError ? <p style={{ color: 'red' }}>Location name must be 3 letters or more</p> : null}
+        {formError ? <p style={{ color: 'red' }}>Location name must be at least 3 letters or more</p> : null}
       </form>
     </>
   );

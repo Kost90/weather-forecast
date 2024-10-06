@@ -1,5 +1,5 @@
 export const geocodingApiUrl: string = 'https://geocoding-api.open-meteo.com/v1/';
-export const weatherApiUrl = 'https://api.open-meteo.com/v1/forecast';
+export const weatherApiUrl:string = 'https://api.open-meteo.com/v1/forecast';
 
 export const weatherIcons: { [key: number]: string } = {
   0: '☀️',

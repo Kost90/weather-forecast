@@ -11,13 +11,6 @@ body {
   background-color: rgb(236 242 242);
 }
 
-main{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
 h1 {
   font-size: 2.5rem;
   line-height: 1.2;

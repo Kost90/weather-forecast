@@ -25,8 +25,6 @@ function WeatherDataPriview() {
     setLoading(value);
   }, []);
 
-  console.log(data);
-
   return (
     <>
       <Form

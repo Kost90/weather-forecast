@@ -1,18 +1,30 @@
-.weatherDataToViewItem{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    background-color: white;
-    padding: 10px;
-    flex-direction: column;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 320px;
+.weatherDataToViewItem {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+  background-color: white;
+  padding: 10px;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 320px;
+  height: 320px;
 }
 
-@media (min-width: 1024px){
-    .weatherDataToViewItem{
-        max-width: 240px;
-    }
+.weatherDataToViewItem p {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .weatherDataToViewItem {
+    width: 320px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .weatherDataToViewItem {
+    width: 220px;
+  }
 }

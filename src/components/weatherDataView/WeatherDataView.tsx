@@ -1,4 +1,4 @@
-import {memo} from 'react';
+import { memo } from 'react';
 import { IWeatherDataToView } from '../../constants/types';
 import styles from './index.module.css';
 import WeatherDataViewItem from '../weatherDataViewItem/WeatherDataViewItem';
@@ -15,6 +15,6 @@ const WeatherDataView = memo(({ data }: IWeatherDataToViewProps) => {
       ))}
     </div>
   );
-})
+});
 
 export default WeatherDataView;

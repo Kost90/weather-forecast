@@ -1,22 +1,25 @@
-import React from 'react'
+import { memo } from 'react';
 import { IWeatherDataToView } from '../../constants/types';
-import styles from './index.module.css'
+import styles from './index.module.css';
 
-interface IWeatherDataViewItemProps{
-    element:IWeatherDataToView;
+interface IWeatherDataViewItemProps {
+  element: IWeatherDataToView;
 }
 
-function WeatherDataViewItem({element}:IWeatherDataViewItemProps) {
-
+const WeatherDataViewItem = memo(({ element }: IWeatherDataViewItemProps) => {
   return (
     <div className={styles.weatherDataToViewItem}>
-        <p>{element.dayOfWeek}/{element.date}</p>
-        <p>{element.icon}</p>
-        <p>{element.condition}</p>
-        <p>{element.minTemperature} - {element.maxTemperature}</p>
-        <p>{element.windSpeed}</p>
+      <p style={{fontWeight:"bold"}}>
+        {element.dayOfWeek}/{element.date}
+      </p>
+      <p>{element.icon}</p>
+      <p>{element.condition}</p>
+      <p>
+        {element.minTemperature}°C  - {element.maxTemperature}°C 
+      </p>
+      <p>wind speed: {element.windSpeed} m/s</p>
     </div>
-  )
-}
+  );
+});
 
-export default WeatherDataViewItem
+export default WeatherDataViewItem;

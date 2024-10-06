@@ -23,8 +23,6 @@ export const getWeatherDataToView = (data: any[]): IWeatherDataToView[] => {
     },
   };
 
-  console.log(weatherData);
-
   const result: IWeatherDataToView[] = weatherData.daily.time.slice(0, 5).map((date, index) => {
     const weatherCode = weatherData.daily.weatherCode[index];
     const temperature2mMax = weatherData.daily.temperature2mMax[index];
