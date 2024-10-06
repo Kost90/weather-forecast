@@ -1,3 +1,56 @@
-// TODO:  edited then this string
-export const apiUrl:string = 'https://geocoding-api.open-meteo.com/v1/';
+export const geocodingApiUrl: string = 'https://geocoding-api.open-meteo.com/v1/';
+export const weatherApiUrl = 'https://api.open-meteo.com/v1/forecast';
 
+export const weatherIcons: { [key: number]: string } = {
+  0: '☀️',
+  1: '🌤',
+  2: '⛅️',
+  3: '☁️',
+  25: '🌨️',
+  29: '🔥',
+  30: '❄️',
+  31: '💨',
+  32: '🌬️',
+  45: '🌫️',
+  48: '🌫️',
+  61: '🌧️',
+  63: '🌧️',
+  65: '🌧️',
+  66: '🌧️',
+  67: '🌧️',
+  80: '🌦️',
+  81: '🌦️',
+  82: '🌦️',
+  85: '🌨️',
+  86: '🌨️',
+  95: '⛈️',
+  96: '⛈️',
+  99: '⛈️',
+};
+
+export const weatherCondition: { [key: number]: string } = {
+  0: 'Clear sky',
+  1: 'Mostly clear',
+  2: 'Partly cloudy',
+  3: 'Overcast',
+  25: 'Ice pellets',
+  29: 'Hot',
+  30: 'Cold',
+  31: 'Windy',
+  32: 'Very windy',
+  45: 'Fog',
+  48: 'Freezing fog',
+  61: 'Light rain',
+  63: 'Moderate rain',
+  65: 'Heavy rain',
+  66: 'Light rain showers',
+  67: 'Heavy rain showers',
+  80: 'Showers',
+  81: 'Heavy showers',
+  82: 'Violent showers',
+  85: 'Light snow',
+  86: 'Heavy snow',
+  95: 'Thunderstorms',
+  96: 'Thunderstorms with hail',
+  99: 'Thunderstorms with hail',
+};

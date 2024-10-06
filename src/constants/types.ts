@@ -3,7 +3,7 @@ export interface FetchArgs extends Omit<RequestInit, 'body'> {
   body?: Record<string, unknown>;
 }
 
-export type LocationResponse = {
+export interface LocationResponse {
   id: number;
   name: string;
   latitude: number;
@@ -24,4 +24,25 @@ export type LocationResponse = {
   admin2?: string;
   admin3?: string;
   admin4?: string;
-};
+}
+
+export type LocationCoordinates = Pick<LocationResponse, 'latitude' | 'longitude'>;
+
+export interface ApiParams {
+  latitude: number | number[];
+  longitude: number | number[];
+  current?: string;
+  hourly?: string;
+  daily: string | string[];
+  timezone: string;
+}
+
+export interface IWeatherDataToView {
+  condition: string;
+  date: string;
+  dayOfWeek: string;
+  icon: string;
+  maxTemperature: number;
+  minTemperature: number;
+  windSpeed: number;
+}

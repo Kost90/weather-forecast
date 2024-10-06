@@ -1,13 +1,19 @@
-import React, { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import Form from '../form/Form';
-import { LocationResponse } from '../../constants/types';
+import { IWeatherDataToView } from '../../constants/types';
+import WeatherDataView from '../weatherDataView/WeatherDataView';
 
 function WeatherDataPriview() {
-  const [data, setData] = useState<LocationResponse[]>([]);
+  const [data, setData] = useState<IWeatherDataToView[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
+  const [locationName, setLocationName] = useState<string>('');
 
-  const handelSubmit = useCallback((data: LocationResponse[]) => {
+  const handelChangeLocationName = useCallback((data: string) => {
+    setLocationName(data);
+  }, []);
+
+  const handelSubmit = useCallback((data: IWeatherDataToView[]) => {
     setData(data);
   }, []);
 
@@ -19,15 +25,22 @@ function WeatherDataPriview() {
     setLoading(value);
   }, []);
 
+  console.log(data);
+
   return (
     <>
       <Form
+        handelChangeLocationName={handelChangeLocationName}
         onSubmit={handelSubmit}
         handelChangeError={handelChangeError}
         handelChangeLoading={handelChangeLoading}
         loading={loading}
       />
-      {error ? <h1>{error}</h1> : null}
+      {error ? (
+        <h1 style={{ color: 'red', backgroundColor: 'white', padding: '10px', borderRadius: '10px' }}>{error}</h1>
+      ) : null}
+      <h1>{locationName}</h1>
+      <WeatherDataView data={data} />
     </>
   );
 }
