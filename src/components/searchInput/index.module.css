@@ -11,6 +11,7 @@
 
 @media (min-width: 768px) {
   .searchInput {
-    max-width: 320px;
+    max-width: 360px;
+    width: 275px;
   }
 }

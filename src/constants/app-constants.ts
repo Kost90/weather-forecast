@@ -1,31 +1,34 @@
+import { Sun, CloudSun, Cloud, CloudSnow, ThermometerSun, Snowflake, Wind, CloudFog, CloudRain, CloudRainWind, CloudLightning, Icon } from "lucide-react";
+
+
 export const geocodingApiUrl: string = 'https://geocoding-api.open-meteo.com/v1/';
 export const weatherApiUrl:string = 'https://api.open-meteo.com/v1/forecast';
 
-export const weatherIcons: { [key: number]: string } = {
-  0: '☀️',
-  1: '🌤',
-  2: '⛅️',
-  3: '☁️',
-  25: '🌨️',
-  29: '🔥',
-  30: '❄️',
-  31: '💨',
-  32: '🌬️',
-  45: '🌫️',
-  48: '🌫️',
-  61: '🌧️',
-  63: '🌧️',
-  65: '🌧️',
-  66: '🌧️',
-  67: '🌧️',
-  80: '🌦️',
-  81: '🌦️',
-  82: '🌦️',
-  85: '🌨️',
-  86: '🌨️',
-  95: '⛈️',
-  96: '⛈️',
-  99: '⛈️',
+export const weatherIcons: { [key: number]: typeof Icon } = {
+  0: Sun,
+  1: CloudSun,
+  2: CloudSun,
+  3: Cloud,
+  25: CloudSnow,
+  29: ThermometerSun,
+  30: Snowflake,      
+  31: Wind,         
+  32: Wind,           
+  45: CloudFog,       
+  48: CloudFog,       
+  61: CloudRain,     
+  63: CloudRain,      
+  65: CloudRain,      
+  66: CloudRain,      
+  67: CloudRain,      
+  80: CloudRainWind, 
+  81: CloudRainWind, 
+  82: CloudRainWind,  
+  85: CloudSnow,     
+  86: CloudSnow,      
+  95: CloudLightning, 
+  96: CloudLightning, 
+  99: CloudLightning, 
 };
 
 export const weatherCondition: { [key: number]: string } = {

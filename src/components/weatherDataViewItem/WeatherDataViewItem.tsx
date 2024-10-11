@@ -7,15 +7,16 @@ interface IWeatherDataViewItemProps {
 }
 
 const WeatherDataViewItem = memo(({ element }: IWeatherDataViewItemProps) => {
+  const IconComponent: React.ElementType = element.icon;
   return (
     <div className={styles.weatherDataToViewItem}>
-      <p style={{fontWeight:"bold"}}>
+      <p style={{ fontWeight: 'bold' }}>
         {element.dayOfWeek}/{element.date}
       </p>
-      <p>{element.icon}</p>
+      <IconComponent size={32} color={element.condition === 'Clear sky' ? 'yellow' : '#49a9f4'} />
       <p>{element.condition}</p>
       <p>
-        {element.minTemperature}°C  - {element.maxTemperature}°C 
+        {element.minTemperature}°C - {element.maxTemperature}°C
       </p>
       <p>wind speed: {element.windSpeed} m/s</p>
     </div>

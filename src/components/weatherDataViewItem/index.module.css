@@ -11,6 +11,9 @@
   width: 100%;
   max-width: 320px;
   height: 320px;
+  -webkit-box-shadow: -1px 1px 7px 2px rgba(163,160,163,1);
+  -moz-box-shadow: -1px 1px 7px 2px rgba(163,160,163,1);
+  box-shadow: -1px 1px 7px 2px rgba(163,160,163,1);
 }
 
 .weatherDataToViewItem p {

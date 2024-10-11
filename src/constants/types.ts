@@ -1,3 +1,4 @@
+
 export interface FetchArgs extends Omit<RequestInit, 'body'> {
   path?: string;
   body?: Record<string, unknown>;
@@ -41,7 +42,7 @@ export interface IWeatherDataToView {
   condition: string;
   date: string;
   dayOfWeek: string;
-  icon: string;
+  icon: React.ElementType;
   maxTemperature: number;
   minTemperature: number;
   windSpeed: number;

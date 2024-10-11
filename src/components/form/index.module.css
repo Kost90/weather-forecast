@@ -10,6 +10,9 @@
   padding: 10px;
   background-color: white;
   border-radius: 10px;
+  -webkit-box-shadow: -1px 1px 7px 2px rgba(163,160,163,1);
+  -moz-box-shadow: -1px 1px 7px 2px rgba(163,160,163,1);
+  box-shadow: -1px 1px 7px 2px rgba(163,160,163,1);
 }
 
 .formElementsWrapper{
